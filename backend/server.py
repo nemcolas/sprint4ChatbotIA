@@ -7,6 +7,8 @@ from flask_cors import CORS
 
 app = Flask(__name__) # Inicializa o Flask
 CORS(app) 
+if __name__ == '__main__':
+    app.run(port=3000) # Inicializa o servidor Flask
 
 loaded_model = pickle.load(open("ML_modelo.pkl", "rb")) # Carrega o modelo treinado
 
