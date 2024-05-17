@@ -7,10 +7,7 @@ from flask_cors import CORS
 
 app = Flask(__name__) # Inicializa o Flask
 CORS(app) 
-if __name__ == '__main__':
-    app.run(port=3000) # Inicializa o servidor Flask
-
-loaded_model = pickle.load(open("ML_modelo.pkl", "rb")) # Carrega o modelo treinado
+loaded_model = pickle.load(open("backend\ML_modelo.pkl", "rb")) # Carrega o modelo treinado
 
 @app.route('/') # Rota principal
 def index():
@@ -24,3 +21,8 @@ def call_predict():
         to_predict = np.array(data).reshape(1, -1) # Converte o dado para o formato aceito pelo modelo
         result = loaded_model.predict(to_predict) # Faz a predição
         return jsonify({'prediction':result[0]}) # Retorna a predição
+
+
+if __name__ == '__main__':
+    app.run(port=3000, debug = True) # Inicializa o servidor Flask
+
