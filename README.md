@@ -23,14 +23,26 @@ Para usar a aplicação, faça uma solicitação POST para a rota `/call_predict
 
 exemplo de solicitação:
 
-```bash
 "data": [1,2,1,2,1]
 ![alt text](image.png)
 
+---------
 
-```bash
 "data:[3,3,3,5,5]
 ![alt text](image-1.png)
+
+
+## Avisos importantes
+
+Estamos atualmente na fase de implementação desta aplicação como parte da Sprint 4 da materia de Web. Você pode conferir o progresso do front-end aqui: [https://salesforce-web.vercel.app/analiseia]
+
+A aplicação funciona corretamente quando acessada via Postman, porem, a integração com o front-end resultou em alguns bugs que até o dia 19/05 não conseguimos resolver, por favor tenha piedade da gente e n desconte pontinhos fessor
+
+## Esse projeto foi desenvolvido por:
+
+Ander Kamada RM: 553449
+Nicolas Martins RM: 553478
+Yago Lucas Gonçalves RM: 553013
 
 
 
